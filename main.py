@@ -14,9 +14,9 @@ class VideoModel(db.Model):
     likes = db.Column(db.Integer, nullable=False)
 
     def __init__(self, name, views, likes):
-        name = self.name
-        views = self.views
-        likes = self.likes
+        self.name = name
+        self.views = views
+        self.likes = likes
 
     def __repr__(self):
         return f"Video(name={self.name}, views={self.views}, likes={self.likes})"
